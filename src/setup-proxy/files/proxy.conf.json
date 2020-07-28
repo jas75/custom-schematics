@@ -1,0 +1,10 @@
+
+{
+  "/api/*": { 
+  "target": "<%= name %>",
+  "secure": false,
+  "logLevel": "debug",
+  "changeOrigin": true
+  }  
+}
+  

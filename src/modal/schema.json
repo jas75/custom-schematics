@@ -1,0 +1,26 @@
+{
+  "$schema": "http://json-schema.org/schema",
+  "id": "DataSchematics",
+  "title": "Data Options Schema",
+  "type": "object",
+  "description": "Create a modal in src/app/modals",
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "The name of the service",
+      "$default": {
+        "$source": "argv",
+        "index": 0
+      },
+      "x-prompt": "You're about to create a modal in src/app/modals ... How would you like to call it ?"
+    },
+    "module":  {
+      "type": "string",
+      "description": "The declaring NgModule.",
+      "default": "src/app/app.module.ts"
+    }
+  },
+  "required": [
+    "name"
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "name": "schematics",
+  "version": "0.0.0",
+  "description": "A blank schematics",
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "test": "npm run build && jasmine src/**/*_spec.js"
+  },
+  "keywords": [
+    "schematics"
+  ],
+  "author": "",
+  "license": "MIT",
+  "schematics": "./src/collection.json",
+  "dependencies": {
+    "@angular-devkit/core": "^10.0.2",
+    "@angular-devkit/schematics": "^10.0.2",
+    "typescript": "~3.9.2"
+  },
+  "devDependencies": {
+    "@schematics/angular": "^10.0.3",
+    "@types/jasmine": "~3.5.0",
+    "@types/node": "^12.11.1",
+    "jasmine": "^3.5.0",
+    "system-commands": "^1.1.7"
+  }
+}

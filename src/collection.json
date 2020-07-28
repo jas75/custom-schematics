@@ -1,0 +1,29 @@
+{
+  "$schema": "../node_modules/@angular-devkit/schematics/collection-schema.json",
+  "schematics": {
+    "schematics": {
+      "description": "A blank schematic.",
+      "factory": "./schematics/index#schematics"
+    },
+    "create-data-service": {
+      "description": "Create a service in src/app/data-access/data",
+      "factory": "./create-data-service/index#createDataService",
+      "schema": "./create-data-service/schema.json"
+    },
+    "modal": {
+      "description": "A blank schematic.",
+      "factory": "./modal/index#modal",
+      "schema": "./modal/schema.json"
+    },
+    "setup-proxy": {
+      "description": "A blank schematic.",
+      "factory": "./setup-proxy/index#setupProxy",
+      "schema": "./setup-proxy/schema.json"
+    },
+    "data-business": {
+      "description": "A blank schematic.",
+      "factory": "./data-business/index#dataBusiness",
+      "schema": "./data-business/schema.json"
+    }
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "$schema": "http://json-schema.org/schema",
+  "id": "BusinessSchematics",
+  "title": "Busness Options Schema",
+  "type": "object",
+  "description": "Create a service in data-access/data",
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "The name of the service",
+      "$default": {
+        "$source": "argv",
+        "index": 0
+      },
+      "x-prompt": "You're about to create a service in src/app/data-access/business ... How would you like to call it ?"
+    },
+    "module":  {
+      "type": "string",
+      "description": "The declaring NgModule.",
+      "default": "src/app/app.module.ts"
+    }
+  },
+  "required": [
+    "name"
+  ]
+}

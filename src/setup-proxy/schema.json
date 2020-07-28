@@ -1,0 +1,21 @@
+{
+  "$schema": "http://json-schema.org/schema",
+  "id": "ProxySetup",
+  "title": "Set up your Proxy",
+  "type": "object",
+  "description": "Create a proxy that is able to call external API",
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "The name of the service",
+      "$default": {
+        "$source": "argv",
+        "index": 0
+      },
+      "x-prompt": "What is the url of the target API ?"
+    }
+  },
+  "required": [
+    "name"
+  ]
+}
