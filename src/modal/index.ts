@@ -26,7 +26,7 @@ function addDeclarationToNgModule(options: any): Rule {
     const modulePath = options.module;
     const source = readIntoSourceFile(host, modulePath);
     
-    const componentPath = `${process.cwd()}/src/app/modals/`
+    const componentPath = `${process.cwd()}/projects/angular-ngrx-material-starter/src/app/modals/`
                           + (options.flat ? '' : strings.dasherize(options.name) + '/')
                           + strings.dasherize(options.name)
                           + (options.type ? '.' : '')
@@ -106,6 +106,8 @@ export function modal(_options: any): Rule {
     if (!_options.name || _options.name <= 0) {
       throw new SchematicsException('You must provide a name');
     }
+
+    _options.module = 'projects/angular-ngrx-material-starter/src/app/app.module.ts'
     const sourceTemplate = url('./files');
   
     const sourceParametrizedTemplates = apply(sourceTemplate, [
@@ -113,7 +115,7 @@ export function modal(_options: any): Rule {
         ..._options,
         ...strings
       }),
-      move(`src/app/modals/${_options.name}/`)
+      move(`projects/angular-ngrx-material-starter/src/app/modals/${_options.name}/`)
     ]);
   
     return chain([
@@ -123,61 +125,4 @@ export function modal(_options: any): Rule {
 
   };
 }
-
-// async function test() {
-//   return new Promise(() => {
-//     rl.question('To use nbgModal, you must install @ng-bootstrap. Would you like to proceed ? Y/n', function(value)  {
-//       const answer = value.toLocaleLowerCase();
-  
-//       switch (answer) {
-//         case 'y':
-//           console.log('ng-bootstrap setup');
-//           break;
-//         case 'n':
-//           console.log('You must install @ng-bootstrap to create ngbModal, please try again later');
-//           break;
-//         default:
-//           console.log('Yes or no, simple as that, please try again later');
-//       }
-  
-//       rl.close();
-//     });
-//   })
-// }
-
-// async function packageExists(path: string): Promise<boolean> {
-//   let exists = fs.stat(path, (err: any) => {
-//     if (!err) {
-//       console.log('file or directory exists');
-//       return true;
-//     }
-//     else if (err.code === 'ENOENT') {
-//       console.log('file or directory does not exist');
-//       return false;
-//     }
-//   });
-
-//   return await exists;
-// }
-
-// async function test() {
-//   let aie = system('npm ls --json').then(output => {
-//     console.log(output);
-//   }).catch(error => {
-//     console.error(error);
-//   });
-  
-//   await aie;
-// }
-
-// function moduleAvailable(name: any) {
-//   try {
-//       require.resolve(name);
-//       return true;
-//   } catch (e) {
-//     console.log(e);
-//   }
-//   return false;
-// }
-
 

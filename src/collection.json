@@ -15,7 +15,7 @@
       "factory": "./modal/index#modal",
       "schema": "./modal/schema.json"
     },
-    "setup-proxy": {
+    "proxy": {
       "description": "A blank schematic.",
       "factory": "./setup-proxy/index#setupProxy",
       "schema": "./setup-proxy/schema.json"
