@@ -5,7 +5,7 @@
       "description": "A blank schematic.",
       "factory": "./schematics/index#schematics"
     },
-    "create-data-service": {
+    "data-service": {
       "description": "Create a service in src/app/data-access/data",
       "factory": "./create-data-service/index#createDataService",
       "schema": "./create-data-service/schema.json"

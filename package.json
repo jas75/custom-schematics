@@ -1,6 +1,6 @@
 {
-  "name": "@jas753/custom-schematics",
-  "version": "1.0.0",
+  "name": "schempack",
+  "version": "1.0.1",
   "description": "A blank schematics",
   "scripts": {
     "build": "tsc -p tsconfig.json",
