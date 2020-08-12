@@ -24,6 +24,10 @@
       "description": "A blank schematic.",
       "factory": "./data-business/index#dataBusiness",
       "schema": "./data-business/schema.json"
+    },
+    "feature": {
+      "description": "A blank schematic.",
+      "factory": "./feature/index#feature"
     }
   }
 }
