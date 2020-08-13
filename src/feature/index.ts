@@ -17,7 +17,7 @@ export function feature(_options: any): Rule {
       ..._options,
       ...strings
     }),
-    move(`projects/angular-ngrx-material-starter/src/app/core/data-access/business/${_options.name}/`)
+    move(`projects/angular-ngrx-material-starter/src/app/features/${_options.name}/`)
   ]);
 
   return chain([

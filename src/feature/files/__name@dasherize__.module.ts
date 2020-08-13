@@ -3,11 +3,11 @@ import { CommonModule } from '@angular/common';
 
 import { SharedModule } from '../../shared/shared.module';
 
-import { <%= dasherize(name) %>tComponent } from './<%= dasherize(name) %>/<%= dasherize(name) %>.component';
-import { <%= dasherize(name) %>RoutingModule } from './<%= dasherize(name) %>-routing.module';
+import { <%= classify(name) %>Component } from './<%= dasherize(name) %>/<%= dasherize(name) %>.component';
+import { <%= classify(name) %>RoutingModule } from './<%= dasherize(name) %>-routing.module';
 
 @NgModule({
   declarations: [<%= classify(name) %>Component],
-  imports: [CommonModule, SharedModule, AboutRoutingModule]
+  imports: [CommonModule, SharedModule, <%= classify(name) %>RoutingModule]
 })
 export class <%= classify(name) %>Module {}
