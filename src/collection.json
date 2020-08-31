@@ -28,6 +28,10 @@
     "feature": {
       "description": "A blank schematic.",
       "factory": "./feature/index#feature"
+    },
+    "feat-wi": {
+      "description": "A blank schematic.",
+      "factory": "./feat-wi/index#featWi"
     }
   }
 }
